@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第三部 · 弑父者</title>
+<meta name="description" content="格鲁吉亚作家亚历山大·卡兹别吉长篇小说《弑父者》（The Patricide）全书中文详细译述。">
+<style>
+:root{
+  --paper:#f8f5ec; --paper2:#f1ecdd; --ink:#261f1a; --ink2:#5b4f45; --ink3:#8a7a6c;
+  --line:#d9cfbc; --accent:#9a2f3c; --gold:#c9a227; --olive:#2f3d29; --night:#221915;
+  --link-un:dotted; --radius:4px;
+}
+html[data-theme=dark]{
+  --paper:#221915; --paper2:#2b211b; --ink:#f4ecd8; --ink2:#cdbba4; --ink3:#9c8a76;
+  --line:#4a3b30; --accent:#d2684f; --gold:#d8b13c; --olive:#384732;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  font-size:19px;line-height:1.95;transition:background .3s,color .3s}
+::selection{background:var(--gold);color:#221915}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+a:hover{border-bottom-style:solid}
+/* progress bar */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:60}
+/* layout */
+.wrap{display:flex;min-height:100vh}
+.side{z-index:40;position:fixed;top:0;bottom:0;left:0;width:252px;padding:2.2rem 1.6rem;overflow-y:auto;
+  border-right:1px solid var(--line);background:var(--paper)}
+.side .sigil{font-size:1.35rem;font-weight:700;letter-spacing:.14em}
+.side .sigil small{display:block;font-size:.68rem;letter-spacing:.32em;color:var(--ink3);margin-top:.35em;font-weight:400}
+.side .lat{font-family:"Libre Baskerville",serif;font-size:.72rem;color:var(--ink3);letter-spacing:.06em;margin:.5rem 0 1.6rem}
+.side nav{font-size:.86rem;line-height:1.7}
+.side nav .grp{margin:1.1rem 0 .35rem;color:var(--ink3);letter-spacing:.25em;font-size:.72rem}
+.side nav a{display:block;color:var(--ink2);border:none;padding:.14rem 0 .14rem .8rem;border-left:2px solid transparent}
+.side nav a:hover{color:var(--accent)}
+.side nav a.cur{color:var(--accent);border-left-color:var(--accent)}
+.side nav a.home{border-left:none;padding-left:0;font-weight:700;color:var(--ink)}
+.main{flex:1;margin-left:252px;padding:3.4rem 2rem 6rem;display:flex;justify-content:center}
+article{width:100%;max-width:38em}
+/* mobile topbar */
+#topbar{display:none;position:fixed;top:0;left:0;right:0;z-index:50;background:var(--paper);
+  border-bottom:1px solid var(--line);padding:.6rem 1rem;align-items:center;justify-content:space-between}
+#topbar .t{font-weight:700;letter-spacing:.12em}
+#topbar button{background:none;border:1px solid var(--line);border-radius:var(--radius);color:var(--ink);
+  font-family:inherit;font-size:.8rem;padding:.25rem .7rem;cursor:pointer}
+#drawer{display:none}
+/* hero (index) */
+.hero{position:relative;background:var(--night);color:#f4ecd8;padding:6.5rem 2rem 10rem;text-align:center;overflow:hidden}
+.hero .kicker,.hero h1,.hero .lat,.hero .meta{position:relative;z-index:2}
+.hero .kicker{letter-spacing:.5em;font-size:.75rem;color:#c9a227;margin-bottom:1.6rem}
+.hero h1{font-size:3.4rem;margin:0;letter-spacing:.22em;font-weight:700}
+.hero .lat{font-family:"Libre Baskerville",serif;font-style:italic;color:#a89878;margin-top:1.1rem;font-size:.95rem}
+.hero .meta{margin-top:2.2rem;font-size:.85rem;color:#d8cba8;letter-spacing:.18em;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hero svg.mtn{position:absolute;left:0;right:0;bottom:0;width:100%;height:36%;opacity:.9}
+.hero .grain{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.torn{display:block;width:100%;height:34px;margin-top:-33px;position:relative;z-index:2}
+/* content typography */
+h2{font-size:1.7rem;letter-spacing:.14em;margin:3.2rem 0 1.4rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+h2 .no{color:var(--gold);font-family:"Libre Baskerville",serif;font-size:.8em;margin-right:.6em;letter-spacing:0}
+h3{font-size:1.22rem;margin:3rem 0 1.1rem;letter-spacing:.08em}
+h3::before{content:"";display:inline-block;width:1.6rem;height:1px;background:var(--gold);vertical-align:middle;margin-right:.7rem}
+p{margin:1.1rem 0}
+blockquote{margin:1.6rem 0;padding:.2rem 0 .2rem 1.4rem;border-left:2px dotted var(--accent);color:var(--ink2);font-size:1.02em}
+blockquote p{margin:.5rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;margin:1.4rem 0}
+th,td{border:1px solid var(--line);padding:.5rem .8rem;text-align:left;line-height:1.6}
+th{background:var(--paper2);letter-spacing:.1em;font-weight:700}
+tbody tr:hover{background:var(--paper2)}
+ul{padding-left:1.4em}
+li{margin:.4rem 0}
+hr{border:none;border-top:1px dotted var(--line);margin:2.6rem 0}
+.note{font-size:.8rem;color:var(--ink3);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.3rem;background:var(--paper2)}
+/* TOC cards on index */
+.toc{margin:1.8rem 0}
+.toc .part{margin:0 0 1.6rem}
+.toc .part .ph{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.4rem}
+.toc .part .ph b{font-size:1.05rem;letter-spacing:.16em}
+.toc .part .ph span{font-family:"Libre Baskerville",serif;font-size:.72rem;color:var(--ink3);letter-spacing:.14em}
+.toc ol{list-style:none;margin:0;padding:0;columns:2;column-gap:2.4rem}
+.toc ol a{display:flex;gap:.6em;color:var(--ink2);border:none;padding:.22rem 0;font-size:.92rem;border-left:2px solid transparent;padding-left:.7rem}
+.toc ol a:hover{color:var(--accent);border-left-color:var(--gold)}
+.toc ol a i{font-style:normal;font-family:"Libre Baskerville",serif;color:var(--ink3);font-size:.8em;min-width:1.6em;padding-top:.25em}
+/* prev / next */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1.6rem;font-size:.9rem}
+.pn a{border:none;color:var(--ink2);max-width:46%}
+.pn a:hover{color:var(--accent)}
+.pn .r{text-align:right;margin-left:auto}
+.pn small{display:block;color:var(--ink3);letter-spacing:.2em;font-size:.7rem;margin-bottom:.3rem}
+footer{margin-top:4rem;padding-top:1.4rem;border-top:1px dotted var(--line);font-size:.75rem;color:var(--ink3);letter-spacing:.08em;line-height:2}
+/* theme toggle */
+#themeBtn{position:fixed;right:1.2rem;bottom:1.2rem;z-index:55;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;font-size:1.05rem;
+  display:flex;align-items:center;justify-content:center;font-family:inherit}
+#themeBtn:hover{border-color:var(--accent)}
+@media(max-width:900px){
+  .side{transform:translateX(-100%);transition:transform .3s;z-index:70;width:78vw;max-width:300px}
+  body.nav-open .side{transform:none;box-shadow:0 0 60px rgba(0,0,0,.35)}
+  .main{margin-left:0;padding:4.6rem 1.2rem 5rem}
+  #topbar{display:flex}
+  body.nav-open #drawer{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:65}
+  .hero h1{font-size:2.3rem}
+  .toc ol{columns:1}
+  body{font-size:17.5px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div id="topbar"><button onclick="toggleNav()">目录</button><span class="t">弑父者</span><button onclick="toggleTheme()">主题</button></div>
+<div id="drawer"></div>
+
+<aside class="side">
+<div class="sigil">弑父者<small>全书详细译述</small></div>
+<div class="lat">MAMIS MKVLELI · The Patricide<br>Alexander Kazbegi, 1882</div>
+<nav>
+<a class="home" href="index.html">扉页 · 作品与人物</a>
+<div class="grp">第一部</div>
+<a href="part1.html#s1">1. 乞丐归来托孤</a>
+<a href="part1.html#s2">2. 努努被许配</a>
+<a href="part1.html#s3">3. 伊阿戈与努努</a>
+<a href="part1.html#s4">4. 格拉哈的血案往事（倒叙）</a>
+<a href="part1.html#s5">5. 关卡勒索</a>
+<a href="part1.html#s6">6. 彩礼交易</a>
+<a href="part1.html#s7">7. 屋顶上的窥听</a>
+<a href="part1.html#s8">8. 月下盟誓</a>
+<a href="part1.html#s9">9. 伊阿戈被捕</a>
+<a href="part1.html#s10">10. 长官衙门的一天</a>
+<a href="part1.html#s11">11. 村里与牢中</a>
+<a href="part1.html#s12">12. 上司与猎狗</a>
+<a href="part1.html#s13">13. 逼婚</a>
+<a href="part1.html#s14">14. 抢亲与柯巴杀人</a>
+<div class="grp">第二部</div>
+<a href="part2.html#s15">15. 阿尔沙要塞</a>
+<a href="part2.html#s16">16. 雷雨夜</a>
+<a href="part2.html#s17">17. 劫狱</a>
+<a href="part2.html#s18">18. 猎鹿与结义</a>
+<a href="part2.html#s19">19. 牧人希奥拉</a>
+<a href="part2.html#s20">20. 看守变朋友</a>
+<a href="part2.html#s21">21. 阴差阳错的逃亡</a>
+<a href="part2.html#s22">22. 熊口重逢</a>
+<a href="part2.html#s23">23. 逃亡之夜</a>
+<a href="part2.html#s24">24. 赫德峡谷遇侠</a>
+<a href="part2.html#s25">25. 血战与再劫</a>
+<a href="part2.html#s26">26. 饿囚与朱古纳之计</a>
+<div class="grp">第三部</div>
+<a href="#s27" data-n="27"><i></i>27. 养伤与打猎</a>
+<a href="#s28" data-n="28"><i></i>28. 夜访与&quot;草料计&quot;</a>
+<a href="#s29" data-n="29"><i></i>29. 维普希亚入伙</a>
+<a href="#s30" data-n="30"><i></i>30. 征兵闹剧</a>
+<a href="#s31" data-n="31"><i></i>31. 干草车闯关</a>
+<a href="#s32" data-n="32"><i></i>32. 父女重逢</a>
+<a href="#s33" data-n="33"><i></i>33. 夺马与告密</a>
+<a href="#s34" data-n="34"><i></i>34. 火困客栈</a>
+<a href="#s35" data-n="35"><i></i>35. 弑父冤案</a>
+<a href="#s36" data-n="36"><i></i>36. 柯巴的复仇与真相</a>
+<div class="grp">卷末</div>
+<a href="notes.html">主题评点 · 译本信息</a>
+</nav>
+</aside>
+<div class="wrap">
+<div class="main"><article>
+<h2><span class="no">Ⅲ</span>第三部</h2>
+<h3 id="s27">27. 养伤与打猎</h3>
+<p>伊阿戈被帕尔乔一家收留在贾里亚赫的阿尔齐村，伤渐愈。柯巴上山打猎兼探消息。[这里有一段全书写得最出色的章节之一：两只公野山羊在悬崖上为争夺母羊决斗，每一次角撞都像枪声在山谷回响；一方把对手逼到崖边，靠的是绝不闪避的信任——正看得入神，埋伏的另一个猎人一枪打死了守方，攻方收势不住，两只山羊一同坠崖。柯巴对这种”不给任何一方享受胜利”的猎法深恶痛绝。]</p>
+<p>那个猎人竟是朱古纳！老友重逢，柯巴得知：努努藏在他家，平安。</p>
+<h3 id="s28">28. 夜访与”草料计”</h3>
+<p>柯巴深夜潜入朱古纳家。努努听见外间有男人说笑，以为是吉尔戈拉上门，吓得缩在角落；直到女主人进来抱住她：“柯巴从伊阿戈那儿来了！我们有救了！”她冲出去抱着柯巴痛哭。</p>
+<p>众人商量如何送努努出山。官道哨卡密布，女人根本混不过去。朱古纳献上一计：</p>
+<blockquote>
+<p>“你还年轻，满脑子硬闯。如今这世道，光凭力气不行，有时用点诡计也不丢人。驿站的三驾马车回程时，哨卡从不拦查——问一句’什么人？’答一句’回站的！’就过去了。我套一辆三驾马车，让努努躺在车底，盖上干草，大摇大摆拉进扎乌格。她父亲在那儿，先护着她，等你们来接。”</p>
+</blockquote>
+<p>柯巴拍案叫绝。</p>
+<h3 id="s29">29. 维普希亚入伙</h3>
+<p>第二天，一个名叫维普希亚（意为”雪豹”）的姆蒂乌尔青年寻上门来——他是伊阿戈和柯巴的结义兄弟，家乡呆不下去了：“如今最吃香的是出卖朋友、告发邻居的货色。我宁可跟他们一起死，也不跟那些东西一起活。”四人正式聚齐。</p>
+<h3 id="s30">30. 征兵闹剧</h3>
+<p>同一日，迪安别克和上司在村里征召山民组成民团去攻打车臣。一个老山民当众陈词：我们冬天在暴风雪里替军队修路、扛辎重，从无怨言；但求你们别让我们去打从没伤害过我们的邻居，“别挑唆我们互相残杀，否则你们在这地方连一个忠心的百姓都不会剩下”。而另一边，贵族地主戈什帕拉什维利家大摆筵席，少爷们喝着酒做着升官发财梦，准备随军”立功”。</p>
+<h3 id="s31">31. 干草车闯关</h3>
+<p>傍晚，朱古纳把努努藏在铺满干草的三驾马车底，从库罗斯赫维出发直奔弗拉季高加索。一路哨卡喝问”什么人？“，他头也不回：”邮车回站，拉过长官耽搁了——有烟叶吗？“哥萨克懒洋洋放行。</p>
+<h3 id="s32">32. 父女重逢</h3>
+<p>弗拉季高加索的山民区边缘，一间半塌的破屋里住着乞丐格拉哈。夜里他回家，先把讨来的几枚硬币藏进地下埋着的木匣，在拐杖上刻一道痕记账——“我死了，就用这钱埋我，不麻烦任何人”。</p>
+<p>门帘一响，裹斗篷的人影立在暗处。</p>
+<blockquote>
+<p>“你是谁？”<br />
+“爸爸！”努努掀开斗篷扑过去。</p>
+</blockquote>
+<p>格拉哈先是狂喜，随即想起风言风语（说她抛弃丈夫、伤风败俗），猛地推开她：“我没有女儿！我女儿是天使，是白鸽……你走！”努努哭诉无门，转身要走。走到门口最后一次回头，看见父亲双手向她伸来、说不出话——父女俩抱头痛哭。听完女儿的血泪遭遇，老人恨道：“如今世道，公道要去异族那里找了。”</p>
+<p>窗外忽然传来一句：“明天半夜，伊阿戈到这里来！”——追出去已不见人影。这是柯巴，他一路跟踪格拉哈找到了破屋，在窗外听见父女相认，留下这句喜讯，就赶回去报信。</p>
+<h3 id="s33">33. 夺马与告密</h3>
+<p>伊阿戈伤愈，与柯巴、帕尔乔、维普希亚、埃尔伯德五人去阿尔戈尼站夺官马。途中撞见一队哥萨克抢了切禅人的肥羊正在宰煮。五人出手救下羊、缴了哥萨克的械，夺马而走，投宿到奥赛梯村庄胡马尔格一个”熟人”家。</p>
+<p>这家主人看上了他们膘肥体壮的骏马，动了歹心：主动”收留”马匹，转身就进城告密，跟长官讨价还价——最后以每人十五枚金币、外加准尉军衔的价码，出卖了五位恩人。</p>
+<h3 id="s34">34. 火困客栈</h3>
+<p>巧合的是，吉尔戈拉恰好陪迪安别克在这位长官衙门里。他隔着门听到”伊阿戈”三个字，血往上涌，立刻跟踪告密者到客栈，订下隔壁房间，贴着薄板墙偷听了一夜——连努努藏身何处、伊阿戈何时来接头，都听得一清二楚。</p>
+<p>天一亮，一个连的士兵包围了客栈。五人发现被围，那个告密的主人还想跳窗逃命，被士兵乱枪打死（士兵奉命射杀一切逃出的人），临死喊了一句：“我出卖了弟兄们，我罪有应得！”</p>
+<p>五人依托房屋顽抗，枪枪不落空。吉尔戈拉献计：“放火烧房！”柴草堆上，烈焰冲天。</p>
+<blockquote>
+<p>“狗东西，这就是你们的胆量！”伊阿戈骂着，把帽子往头上一压，对同伴们说：“弟兄们！要死就死得像条汉子！”</p>
+</blockquote>
+<p>五人挥舞马刀从火中杀出，硬是在重围里劈开一条血路。但寡不敌众——烟尘散尽，地上躺着四具被砍碎的身躯：伊阿戈、帕尔乔、维普希亚、埃尔伯德。只有柯巴奇迹般带着轻伤夺马冲进了森林。</p>
+<h3 id="s35">35. 弑父冤案</h3>
+<p>同一夜，弗拉季高加索破屋里，格拉哈被人杀害，匣中积蓄被劫。</p>
+<p>天亮，“案情”迅速水落石出：女儿努努前天来投奔父亲，夜间只有她俩在屋——凶手就是努努。她本已名声”败坏”，如今坐实了<strong>弑父</strong>。没人听她辩解：她说清晨醒来发现父亲倒在血泊里，她说她是清白的——没人信。</p>
+<p>弗拉季高加索的下市场广场搭起木台，竖起高柱，柱上钉着牌子：“耻辱柱”。努努穿着囚服、胸前挂着”弑父者”的木牌，被押上高高的囚车游街。刽子手托起她的头示众，她一松手又垂了下去。</p>
+<p>官员宣判：努努（又名尼诺），弑父罪成立，终身流放西伯利亚服苦役。神父上台劝她忏悔。努努要过十字架，吻了它，用尽最后的力气抬头：</p>
+<blockquote>
+<p>“我以全知全能的上帝起誓，以神圣的十字架起誓，以我的名誉起誓，以伊阿戈的亡魂起誓——我没有罪！”</p>
+</blockquote>
+<p>手落，人倒。受尽屈辱与悲痛的心再也承受不住——努努死在耻辱柱下。</p>
+<h3 id="s36">36. 柯巴的复仇与真相</h3>
+<p>第二天，迪安别克带着吉尔戈拉乘三驾马车回赫维，议论着昨日之事。吉尔戈拉病了似的脸色惨白——努努临死的脸缠着他，良心第一次苏醒。</p>
+<p>林中一声枪响，迪安别克滚下车毙命；第二枪，吉尔戈拉肋部中弹。一个声音在林中喊：</p>
+<blockquote>
+<p>“是我，柯巴！这是替伊阿戈讨的命！”</p>
+</blockquote>
+<p>弥留之际，吉尔戈拉叫来神父，说出了全部真相：是他诬陷伊阿戈入狱；是他带人烧死了伊阿戈和朋友们；<strong>是他杀死了努努的父亲</strong>——那晚烧死伊阿戈后，他赶到破屋，本想连努努一起杀掉，又觉得”一刀痛快太便宜了她”，于是杀死老人、嫁祸努努，要让她在无尽折磨中偿还拒绝他的代价。</p>
+<blockquote>
+<p>“我爱过努努……哦，我那样爱她！她拒绝了我，爱着别人，践踏了我的骄傲……我以为让她受一辈子苦，我就能安宁。可是，唉！我没有得到安宁……”</p>
+</blockquote>
+<p>死前幻觉中，他看见努努的父亲站在床前怒视着他。他喊着”努努！格拉哈！救……“，在痉挛中断了气。</p>
+<p>——全书完。</p>
+<hr />
+<div class="pn">
+<a href="part2.html"><small>第二部</small>← 第二部 · 饿囚与朱古纳之计</a>
+<a class="r" href="notes.html"><small>卷末</small>主题评点 · 译本信息 →</a>
+</div>
+<footer>
+《弑父者》（მამის მკვლელი / The Patricide），亚历山大·卡兹别吉著，1882 年发表，作品已进入公有领域。<br>
+本页为依据俄文全译本制作的中文详细译述，情节、人物、关键对白均无省略。静态站点，可直接托管于 GitHub Pages。
+</footer>
+</article></div>
+</div>
+<button id="themeBtn" onclick="toggleTheme()" title="切换明暗主题">☾</button>
+<script>
+(function(){
+  var root=document.documentElement;
+  var saved=null;try{saved=localStorage.getItem('sfz-theme')}catch(e){}
+  if(saved)root.setAttribute('data-theme',saved);
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)root.setAttribute('data-theme','dark');
+  window.toggleTheme=function(){
+    var t=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',t);try{localStorage.setItem('sfz-theme',t)}catch(e){}
+    syncBtn();
+  };
+  function syncBtn(){var b=document.getElementById('themeBtn');if(b)b.textContent=root.getAttribute('data-theme')==='dark'?'☀':'☾'}
+  syncBtn();
+  // progress
+  var bar=document.getElementById('prog');
+  if(bar){addEventListener('scroll',function(){
+    var h=document.body.scrollHeight-innerHeight;
+    bar.style.width=(h>0?scrollY/h*100:0)+'%';
+  },{passive:true});}
+  // nav drawer
+  window.toggleNav=function(){document.body.classList.toggle('nav-open')};
+  var dr=document.getElementById('drawer');if(dr)dr.addEventListener('click',toggleNav);
+  // remember reading position
+  var page=location.pathname.split('/').pop()||'index.html';
+  if(/^part\d\.html$/.test(page)){
+    addEventListener('beforeunload',function(){
+      var cur=document.querySelector('.side nav a.cur');
+      try{localStorage.setItem('sfz-last',JSON.stringify({p:page,y:Math.round(scrollY),t:document.title}))}catch(e){}
+    });
+    // restore
+    try{var last=JSON.parse(localStorage.getItem('sfz-last')||'null');
+      if(last&&last.p===page&&last.y>200&&!location.hash){
+        addEventListener('load',function(){scrollTo(0,last.y)});
+      }}catch(e){}
+    // current scene highlight
+    var links=[].slice.call(document.querySelectorAll('.side nav a[href^="#"]'));
+    var heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))}).filter(Boolean);
+    if(heads.length&&'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){
+            links.forEach(function(a){a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id)});
+          }});
+      },{rootMargin:'-15% 0px -70% 0px'});
+      heads.forEach(function(h){io.observe(h)});
+    }
+  }
+})();
+</script>
+</body>
+</html>
