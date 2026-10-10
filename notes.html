@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>主题评点与译本信息 · 弑父者</title>
+<meta name="description" content="格鲁吉亚作家亚历山大·卡兹别吉长篇小说《弑父者》（The Patricide）全书中文详细译述。">
+<style>
+:root{
+  --paper:#f8f5ec; --paper2:#f1ecdd; --ink:#261f1a; --ink2:#5b4f45; --ink3:#8a7a6c;
+  --line:#d9cfbc; --accent:#9a2f3c; --gold:#c9a227; --olive:#2f3d29; --night:#221915;
+  --link-un:dotted; --radius:4px;
+}
+html[data-theme=dark]{
+  --paper:#221915; --paper2:#2b211b; --ink:#f4ecd8; --ink2:#cdbba4; --ink3:#9c8a76;
+  --line:#4a3b30; --accent:#d2684f; --gold:#d8b13c; --olive:#384732;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  font-size:19px;line-height:1.95;transition:background .3s,color .3s}
+::selection{background:var(--gold);color:#221915}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+a:hover{border-bottom-style:solid}
+/* progress bar */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:60}
+/* layout */
+.wrap{display:flex;min-height:100vh}
+.side{z-index:40;position:fixed;top:0;bottom:0;left:0;width:252px;padding:2.2rem 1.6rem;overflow-y:auto;
+  border-right:1px solid var(--line);background:var(--paper)}
+.side .sigil{font-size:1.35rem;font-weight:700;letter-spacing:.14em}
+.side .sigil small{display:block;font-size:.68rem;letter-spacing:.32em;color:var(--ink3);margin-top:.35em;font-weight:400}
+.side .lat{font-family:"Libre Baskerville",serif;font-size:.72rem;color:var(--ink3);letter-spacing:.06em;margin:.5rem 0 1.6rem}
+.side nav{font-size:.86rem;line-height:1.7}
+.side nav .grp{margin:1.1rem 0 .35rem;color:var(--ink3);letter-spacing:.25em;font-size:.72rem}
+.side nav a{display:block;color:var(--ink2);border:none;padding:.14rem 0 .14rem .8rem;border-left:2px solid transparent}
+.side nav a:hover{color:var(--accent)}
+.side nav a.cur{color:var(--accent);border-left-color:var(--accent)}
+.side nav a.home{border-left:none;padding-left:0;font-weight:700;color:var(--ink)}
+.main{flex:1;margin-left:252px;padding:3.4rem 2rem 6rem;display:flex;justify-content:center}
+article{width:100%;max-width:38em}
+/* mobile topbar */
+#topbar{display:none;position:fixed;top:0;left:0;right:0;z-index:50;background:var(--paper);
+  border-bottom:1px solid var(--line);padding:.6rem 1rem;align-items:center;justify-content:space-between}
+#topbar .t{font-weight:700;letter-spacing:.12em}
+#topbar button{background:none;border:1px solid var(--line);border-radius:var(--radius);color:var(--ink);
+  font-family:inherit;font-size:.8rem;padding:.25rem .7rem;cursor:pointer}
+#drawer{display:none}
+/* hero (index) */
+.hero{position:relative;background:var(--night);color:#f4ecd8;padding:6.5rem 2rem 10rem;text-align:center;overflow:hidden}
+.hero .kicker,.hero h1,.hero .lat,.hero .meta{position:relative;z-index:2}
+.hero .kicker{letter-spacing:.5em;font-size:.75rem;color:#c9a227;margin-bottom:1.6rem}
+.hero h1{font-size:3.4rem;margin:0;letter-spacing:.22em;font-weight:700}
+.hero .lat{font-family:"Libre Baskerville",serif;font-style:italic;color:#a89878;margin-top:1.1rem;font-size:.95rem}
+.hero .meta{margin-top:2.2rem;font-size:.85rem;color:#d8cba8;letter-spacing:.18em;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hero svg.mtn{position:absolute;left:0;right:0;bottom:0;width:100%;height:36%;opacity:.9}
+.hero .grain{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.torn{display:block;width:100%;height:34px;margin-top:-33px;position:relative;z-index:2}
+/* content typography */
+h2{font-size:1.7rem;letter-spacing:.14em;margin:3.2rem 0 1.4rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+h2 .no{color:var(--gold);font-family:"Libre Baskerville",serif;font-size:.8em;margin-right:.6em;letter-spacing:0}
+h3{font-size:1.22rem;margin:3rem 0 1.1rem;letter-spacing:.08em}
+h3::before{content:"";display:inline-block;width:1.6rem;height:1px;background:var(--gold);vertical-align:middle;margin-right:.7rem}
+p{margin:1.1rem 0}
+blockquote{margin:1.6rem 0;padding:.2rem 0 .2rem 1.4rem;border-left:2px dotted var(--accent);color:var(--ink2);font-size:1.02em}
+blockquote p{margin:.5rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;margin:1.4rem 0}
+th,td{border:1px solid var(--line);padding:.5rem .8rem;text-align:left;line-height:1.6}
+th{background:var(--paper2);letter-spacing:.1em;font-weight:700}
+tbody tr:hover{background:var(--paper2)}
+ul{padding-left:1.4em}
+li{margin:.4rem 0}
+hr{border:none;border-top:1px dotted var(--line);margin:2.6rem 0}
+.note{font-size:.8rem;color:var(--ink3);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.3rem;background:var(--paper2)}
+/* TOC cards on index */
+.toc{margin:1.8rem 0}
+.toc .part{margin:0 0 1.6rem}
+.toc .part .ph{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.4rem}
+.toc .part .ph b{font-size:1.05rem;letter-spacing:.16em}
+.toc .part .ph span{font-family:"Libre Baskerville",serif;font-size:.72rem;color:var(--ink3);letter-spacing:.14em}
+.toc ol{list-style:none;margin:0;padding:0;columns:2;column-gap:2.4rem}
+.toc ol a{display:flex;gap:.6em;color:var(--ink2);border:none;padding:.22rem 0;font-size:.92rem;border-left:2px solid transparent;padding-left:.7rem}
+.toc ol a:hover{color:var(--accent);border-left-color:var(--gold)}
+.toc ol a i{font-style:normal;font-family:"Libre Baskerville",serif;color:var(--ink3);font-size:.8em;min-width:1.6em;padding-top:.25em}
+/* prev / next */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1.6rem;font-size:.9rem}
+.pn a{border:none;color:var(--ink2);max-width:46%}
+.pn a:hover{color:var(--accent)}
+.pn .r{text-align:right;margin-left:auto}
+.pn small{display:block;color:var(--ink3);letter-spacing:.2em;font-size:.7rem;margin-bottom:.3rem}
+footer{margin-top:4rem;padding-top:1.4rem;border-top:1px dotted var(--line);font-size:.75rem;color:var(--ink3);letter-spacing:.08em;line-height:2}
+/* theme toggle */
+#themeBtn{position:fixed;right:1.2rem;bottom:1.2rem;z-index:55;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;font-size:1.05rem;
+  display:flex;align-items:center;justify-content:center;font-family:inherit}
+#themeBtn:hover{border-color:var(--accent)}
+@media(max-width:900px){
+  .side{transform:translateX(-100%);transition:transform .3s;z-index:70;width:78vw;max-width:300px}
+  body.nav-open .side{transform:none;box-shadow:0 0 60px rgba(0,0,0,.35)}
+  .main{margin-left:0;padding:4.6rem 1.2rem 5rem}
+  #topbar{display:flex}
+  body.nav-open #drawer{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:65}
+  .hero h1{font-size:2.3rem}
+  .toc ol{columns:1}
+  body{font-size:17.5px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div id="topbar"><button onclick="toggleNav()">目录</button><span class="t">弑父者</span><button onclick="toggleTheme()">主题</button></div>
+<div id="drawer"></div>
+
+<aside class="side">
+<div class="sigil">弑父者<small>全书详细译述</small></div>
+<div class="lat">MAMIS MKVLELI · The Patricide<br>Alexander Kazbegi, 1882</div>
+<nav>
+<a class="home" href="index.html">扉页 · 作品与人物</a>
+<div class="grp">第一部</div>
+<a href="part1.html#s1">1. 乞丐归来托孤</a>
+<a href="part1.html#s2">2. 努努被许配</a>
+<a href="part1.html#s3">3. 伊阿戈与努努</a>
+<a href="part1.html#s4">4. 格拉哈的血案往事（倒叙）</a>
+<a href="part1.html#s5">5. 关卡勒索</a>
+<a href="part1.html#s6">6. 彩礼交易</a>
+<a href="part1.html#s7">7. 屋顶上的窥听</a>
+<a href="part1.html#s8">8. 月下盟誓</a>
+<a href="part1.html#s9">9. 伊阿戈被捕</a>
+<a href="part1.html#s10">10. 长官衙门的一天</a>
+<a href="part1.html#s11">11. 村里与牢中</a>
+<a href="part1.html#s12">12. 上司与猎狗</a>
+<a href="part1.html#s13">13. 逼婚</a>
+<a href="part1.html#s14">14. 抢亲与柯巴杀人</a>
+<div class="grp">第二部</div>
+<a href="part2.html#s15">15. 阿尔沙要塞</a>
+<a href="part2.html#s16">16. 雷雨夜</a>
+<a href="part2.html#s17">17. 劫狱</a>
+<a href="part2.html#s18">18. 猎鹿与结义</a>
+<a href="part2.html#s19">19. 牧人希奥拉</a>
+<a href="part2.html#s20">20. 看守变朋友</a>
+<a href="part2.html#s21">21. 阴差阳错的逃亡</a>
+<a href="part2.html#s22">22. 熊口重逢</a>
+<a href="part2.html#s23">23. 逃亡之夜</a>
+<a href="part2.html#s24">24. 赫德峡谷遇侠</a>
+<a href="part2.html#s25">25. 血战与再劫</a>
+<a href="part2.html#s26">26. 饿囚与朱古纳之计</a>
+<div class="grp">第三部</div>
+<a href="part3.html#s27">27. 养伤与打猎</a>
+<a href="part3.html#s28">28. 夜访与&quot;草料计&quot;</a>
+<a href="part3.html#s29">29. 维普希亚入伙</a>
+<a href="part3.html#s30">30. 征兵闹剧</a>
+<a href="part3.html#s31">31. 干草车闯关</a>
+<a href="part3.html#s32">32. 父女重逢</a>
+<a href="part3.html#s33">33. 夺马与告密</a>
+<a href="part3.html#s34">34. 火困客栈</a>
+<a href="part3.html#s35">35. 弑父冤案</a>
+<a href="part3.html#s36">36. 柯巴的复仇与真相</a>
+<div class="grp">卷末</div>
+<a href="notes.html">主题评点 · 译本信息</a>
+</nav>
+</aside>
+<div class="wrap">
+<div class="main"><article>
+<h2 id="六主题与结构评点">六、主题与结构评点</h2>
+<ol type="1">
+<li><strong>题名的反讽</strong>：真正的”弑父者”是吉尔戈拉，被钉上耻辱柱的却是努努。殖民司法的颠倒黑白，是全书的中心控诉。</li>
+<li><strong>三层压迫</strong>：沙俄殖民官僚（迪安别克、长官）+ 民族败类（吉尔戈拉这类”给沙皇当差”的山民）+ 金钱腐蚀下的亲情（收彩礼卖侄女的叔婶）。作者借老人之口不断哀叹村社公理（泰米）的消亡：“过去公社连结了婚的都能拆散，如今谁还讲公道？”</li>
+<li><strong>客人与面包盐</strong>：山地伦理的最高准则是”不负客人”。希奥拉宁死不出卖伊阿戈、帕尔乔收留白不相识的逃亡者、而胡马尔格的主人出卖恩人——正反对照，是全书的道德坐标。</li>
+<li><strong>自然描写</strong>：库罗山崩、山羊决斗、捷列克河搏斗等段落是格鲁吉亚散文的经典名篇，自然永远与人物的尊严和战斗互为镜像。</li>
+<li><strong>斯大林与柯巴</strong>：柯巴是书中唯一的幸存复仇者。少年朱加什维利（斯大林）最迷的正是这个人物——枪法如神、为义杀人、千里复仇、消失于山林。他以”柯巴”为化名参加革命，一用就是十几年。</li>
+</ol>
+<hr />
+<hr />
+<h2 id="七译本与延伸">七、译本与延伸</h2>
+<ul>
+<li><strong>格鲁吉亚语原文</strong>：格鲁吉亚国家图书馆数字化馆藏可查（搜索 მამის მკვლელი, ალექსანდრე ყაზბეგი）。</li>
+<li><strong>俄文译本</strong>：流通最广的是苏联时代译本，本文即据此译述。</li>
+<li><strong>英文</strong>：无完整商业译本；仅有选段和研究性节译。</li>
+<li><strong>中文</strong>：截至目前无任何中文译本出版，本文是第一个全书级的详细中文译述。</li>
+</ul>
+<div class="pn">
+<a href="part3.html"><small>第三部</small>← 第三部 · 柯巴的复仇与真相</a>
+<a class="r" href="index.html"><small>扉页</small>回到扉页 →</a>
+</div>
+<footer>
+《弑父者》（მამის მკვლელი / The Patricide），亚历山大·卡兹别吉著，1882 年发表，作品已进入公有领域。<br>
+本页为依据俄文全译本制作的中文详细译述，情节、人物、关键对白均无省略。静态站点，可直接托管于 GitHub Pages。
+</footer>
+</article></div>
+</div>
+<button id="themeBtn" onclick="toggleTheme()" title="切换明暗主题">☾</button>
+<script>
+(function(){
+  var root=document.documentElement;
+  var saved=null;try{saved=localStorage.getItem('sfz-theme')}catch(e){}
+  if(saved)root.setAttribute('data-theme',saved);
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)root.setAttribute('data-theme','dark');
+  window.toggleTheme=function(){
+    var t=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',t);try{localStorage.setItem('sfz-theme',t)}catch(e){}
+    syncBtn();
+  };
+  function syncBtn(){var b=document.getElementById('themeBtn');if(b)b.textContent=root.getAttribute('data-theme')==='dark'?'☀':'☾'}
+  syncBtn();
+  // progress
+  var bar=document.getElementById('prog');
+  if(bar){addEventListener('scroll',function(){
+    var h=document.body.scrollHeight-innerHeight;
+    bar.style.width=(h>0?scrollY/h*100:0)+'%';
+  },{passive:true});}
+  // nav drawer
+  window.toggleNav=function(){document.body.classList.toggle('nav-open')};
+  var dr=document.getElementById('drawer');if(dr)dr.addEventListener('click',toggleNav);
+  // remember reading position
+  var page=location.pathname.split('/').pop()||'index.html';
+  if(/^part\d\.html$/.test(page)){
+    addEventListener('beforeunload',function(){
+      var cur=document.querySelector('.side nav a.cur');
+      try{localStorage.setItem('sfz-last',JSON.stringify({p:page,y:Math.round(scrollY),t:document.title}))}catch(e){}
+    });
+    // restore
+    try{var last=JSON.parse(localStorage.getItem('sfz-last')||'null');
+      if(last&&last.p===page&&last.y>200&&!location.hash){
+        addEventListener('load',function(){scrollTo(0,last.y)});
+      }}catch(e){}
+    // current scene highlight
+    var links=[].slice.call(document.querySelectorAll('.side nav a[href^="#"]'));
+    var heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))}).filter(Boolean);
+    if(heads.length&&'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){
+            links.forEach(function(a){a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id)});
+          }});
+      },{rootMargin:'-15% 0px -70% 0px'});
+      heads.forEach(function(h){io.observe(h)});
+    }
+  }
+})();
+</script>
+</body>
+</html>
