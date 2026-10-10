@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一部 · 弑父者</title>
+<meta name="description" content="格鲁吉亚作家亚历山大·卡兹别吉长篇小说《弑父者》（The Patricide）全书中文详细译述。">
+<style>
+:root{
+  --paper:#f8f5ec; --paper2:#f1ecdd; --ink:#261f1a; --ink2:#5b4f45; --ink3:#8a7a6c;
+  --line:#d9cfbc; --accent:#9a2f3c; --gold:#c9a227; --olive:#2f3d29; --night:#221915;
+  --link-un:dotted; --radius:4px;
+}
+html[data-theme=dark]{
+  --paper:#221915; --paper2:#2b211b; --ink:#f4ecd8; --ink2:#cdbba4; --ink3:#9c8a76;
+  --line:#4a3b30; --accent:#d2684f; --gold:#d8b13c; --olive:#384732;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  font-size:19px;line-height:1.95;transition:background .3s,color .3s}
+::selection{background:var(--gold);color:#221915}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+a:hover{border-bottom-style:solid}
+/* progress bar */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:60}
+/* layout */
+.wrap{display:flex;min-height:100vh}
+.side{z-index:40;position:fixed;top:0;bottom:0;left:0;width:252px;padding:2.2rem 1.6rem;overflow-y:auto;
+  border-right:1px solid var(--line);background:var(--paper)}
+.side .sigil{font-size:1.35rem;font-weight:700;letter-spacing:.14em}
+.side .sigil small{display:block;font-size:.68rem;letter-spacing:.32em;color:var(--ink3);margin-top:.35em;font-weight:400}
+.side .lat{font-family:"Libre Baskerville",serif;font-size:.72rem;color:var(--ink3);letter-spacing:.06em;margin:.5rem 0 1.6rem}
+.side nav{font-size:.86rem;line-height:1.7}
+.side nav .grp{margin:1.1rem 0 .35rem;color:var(--ink3);letter-spacing:.25em;font-size:.72rem}
+.side nav a{display:block;color:var(--ink2);border:none;padding:.14rem 0 .14rem .8rem;border-left:2px solid transparent}
+.side nav a:hover{color:var(--accent)}
+.side nav a.cur{color:var(--accent);border-left-color:var(--accent)}
+.side nav a.home{border-left:none;padding-left:0;font-weight:700;color:var(--ink)}
+.main{flex:1;margin-left:252px;padding:3.4rem 2rem 6rem;display:flex;justify-content:center}
+article{width:100%;max-width:38em}
+/* mobile topbar */
+#topbar{display:none;position:fixed;top:0;left:0;right:0;z-index:50;background:var(--paper);
+  border-bottom:1px solid var(--line);padding:.6rem 1rem;align-items:center;justify-content:space-between}
+#topbar .t{font-weight:700;letter-spacing:.12em}
+#topbar button{background:none;border:1px solid var(--line);border-radius:var(--radius);color:var(--ink);
+  font-family:inherit;font-size:.8rem;padding:.25rem .7rem;cursor:pointer}
+#drawer{display:none}
+/* hero (index) */
+.hero{position:relative;background:var(--night);color:#f4ecd8;padding:6.5rem 2rem 10rem;text-align:center;overflow:hidden}
+.hero .kicker,.hero h1,.hero .lat,.hero .meta{position:relative;z-index:2}
+.hero .kicker{letter-spacing:.5em;font-size:.75rem;color:#c9a227;margin-bottom:1.6rem}
+.hero h1{font-size:3.4rem;margin:0;letter-spacing:.22em;font-weight:700}
+.hero .lat{font-family:"Libre Baskerville",serif;font-style:italic;color:#a89878;margin-top:1.1rem;font-size:.95rem}
+.hero .meta{margin-top:2.2rem;font-size:.85rem;color:#d8cba8;letter-spacing:.18em;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hero svg.mtn{position:absolute;left:0;right:0;bottom:0;width:100%;height:36%;opacity:.9}
+.hero .grain{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.torn{display:block;width:100%;height:34px;margin-top:-33px;position:relative;z-index:2}
+/* content typography */
+h2{font-size:1.7rem;letter-spacing:.14em;margin:3.2rem 0 1.4rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+h2 .no{color:var(--gold);font-family:"Libre Baskerville",serif;font-size:.8em;margin-right:.6em;letter-spacing:0}
+h3{font-size:1.22rem;margin:3rem 0 1.1rem;letter-spacing:.08em}
+h3::before{content:"";display:inline-block;width:1.6rem;height:1px;background:var(--gold);vertical-align:middle;margin-right:.7rem}
+p{margin:1.1rem 0}
+blockquote{margin:1.6rem 0;padding:.2rem 0 .2rem 1.4rem;border-left:2px dotted var(--accent);color:var(--ink2);font-size:1.02em}
+blockquote p{margin:.5rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;margin:1.4rem 0}
+th,td{border:1px solid var(--line);padding:.5rem .8rem;text-align:left;line-height:1.6}
+th{background:var(--paper2);letter-spacing:.1em;font-weight:700}
+tbody tr:hover{background:var(--paper2)}
+ul{padding-left:1.4em}
+li{margin:.4rem 0}
+hr{border:none;border-top:1px dotted var(--line);margin:2.6rem 0}
+.note{font-size:.8rem;color:var(--ink3);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.3rem;background:var(--paper2)}
+/* TOC cards on index */
+.toc{margin:1.8rem 0}
+.toc .part{margin:0 0 1.6rem}
+.toc .part .ph{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.4rem}
+.toc .part .ph b{font-size:1.05rem;letter-spacing:.16em}
+.toc .part .ph span{font-family:"Libre Baskerville",serif;font-size:.72rem;color:var(--ink3);letter-spacing:.14em}
+.toc ol{list-style:none;margin:0;padding:0;columns:2;column-gap:2.4rem}
+.toc ol a{display:flex;gap:.6em;color:var(--ink2);border:none;padding:.22rem 0;font-size:.92rem;border-left:2px solid transparent;padding-left:.7rem}
+.toc ol a:hover{color:var(--accent);border-left-color:var(--gold)}
+.toc ol a i{font-style:normal;font-family:"Libre Baskerville",serif;color:var(--ink3);font-size:.8em;min-width:1.6em;padding-top:.25em}
+/* prev / next */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:4rem;border-top:1px solid var(--line);padding-top:1.6rem;font-size:.9rem}
+.pn a{border:none;color:var(--ink2);max-width:46%}
+.pn a:hover{color:var(--accent)}
+.pn .r{text-align:right;margin-left:auto}
+.pn small{display:block;color:var(--ink3);letter-spacing:.2em;font-size:.7rem;margin-bottom:.3rem}
+footer{margin-top:4rem;padding-top:1.4rem;border-top:1px dotted var(--line);font-size:.75rem;color:var(--ink3);letter-spacing:.08em;line-height:2}
+/* theme toggle */
+#themeBtn{position:fixed;right:1.2rem;bottom:1.2rem;z-index:55;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;font-size:1.05rem;
+  display:flex;align-items:center;justify-content:center;font-family:inherit}
+#themeBtn:hover{border-color:var(--accent)}
+@media(max-width:900px){
+  .side{transform:translateX(-100%);transition:transform .3s;z-index:70;width:78vw;max-width:300px}
+  body.nav-open .side{transform:none;box-shadow:0 0 60px rgba(0,0,0,.35)}
+  .main{margin-left:0;padding:4.6rem 1.2rem 5rem}
+  #topbar{display:flex}
+  body.nav-open #drawer{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:65}
+  .hero h1{font-size:2.3rem}
+  .toc ol{columns:1}
+  body{font-size:17.5px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div id="topbar"><button onclick="toggleNav()">目录</button><span class="t">弑父者</span><button onclick="toggleTheme()">主题</button></div>
+<div id="drawer"></div>
+
+<aside class="side">
+<div class="sigil">弑父者<small>全书详细译述</small></div>
+<div class="lat">MAMIS MKVLELI · The Patricide<br>Alexander Kazbegi, 1882</div>
+<nav>
+<a class="home" href="index.html">扉页 · 作品与人物</a>
+<div class="grp">第一部</div>
+<a href="#s1" data-n="1"><i></i>1. 乞丐归来托孤</a>
+<a href="#s2" data-n="2"><i></i>2. 努努被许配</a>
+<a href="#s3" data-n="3"><i></i>3. 伊阿戈与努努</a>
+<a href="#s4" data-n="4"><i></i>4. 格拉哈的血案往事（倒叙）</a>
+<a href="#s5" data-n="5"><i></i>5. 关卡勒索</a>
+<a href="#s6" data-n="6"><i></i>6. 彩礼交易</a>
+<a href="#s7" data-n="7"><i></i>7. 屋顶上的窥听</a>
+<a href="#s8" data-n="8"><i></i>8. 月下盟誓</a>
+<a href="#s9" data-n="9"><i></i>9. 伊阿戈被捕</a>
+<a href="#s10" data-n="10"><i></i>10. 长官衙门的一天</a>
+<a href="#s11" data-n="11"><i></i>11. 村里与牢中</a>
+<a href="#s12" data-n="12"><i></i>12. 上司与猎狗</a>
+<a href="#s13" data-n="13"><i></i>13. 逼婚</a>
+<a href="#s14" data-n="14"><i></i>14. 抢亲与柯巴杀人</a>
+<div class="grp">第二部</div>
+<a href="part2.html#s15">15. 阿尔沙要塞</a>
+<a href="part2.html#s16">16. 雷雨夜</a>
+<a href="part2.html#s17">17. 劫狱</a>
+<a href="part2.html#s18">18. 猎鹿与结义</a>
+<a href="part2.html#s19">19. 牧人希奥拉</a>
+<a href="part2.html#s20">20. 看守变朋友</a>
+<a href="part2.html#s21">21. 阴差阳错的逃亡</a>
+<a href="part2.html#s22">22. 熊口重逢</a>
+<a href="part2.html#s23">23. 逃亡之夜</a>
+<a href="part2.html#s24">24. 赫德峡谷遇侠</a>
+<a href="part2.html#s25">25. 血战与再劫</a>
+<a href="part2.html#s26">26. 饿囚与朱古纳之计</a>
+<div class="grp">第三部</div>
+<a href="part3.html#s27">27. 养伤与打猎</a>
+<a href="part3.html#s28">28. 夜访与&quot;草料计&quot;</a>
+<a href="part3.html#s29">29. 维普希亚入伙</a>
+<a href="part3.html#s30">30. 征兵闹剧</a>
+<a href="part3.html#s31">31. 干草车闯关</a>
+<a href="part3.html#s32">32. 父女重逢</a>
+<a href="part3.html#s33">33. 夺马与告密</a>
+<a href="part3.html#s34">34. 火困客栈</a>
+<a href="part3.html#s35">35. 弑父冤案</a>
+<a href="part3.html#s36">36. 柯巴的复仇与真相</a>
+<div class="grp">卷末</div>
+<a href="notes.html">主题评点 · 译本信息</a>
+</nav>
+</aside>
+<div class="wrap">
+<div class="main"><article>
+<h2><span class="no">Ⅰ</span>第一部</h2>
+<h3 id="s1">1. 乞丐归来托孤</h3>
+<p>上午十一点，赫维山区一座村庄的农舍里，火炉边坐着三人：主人奥尼塞·格拉什维利在扎裹腿，妻子玛希娅在纺羊毛，奥尼塞的哥哥——村里人称”乞丐格拉哈”——拨着潘杜里琴，唱一支古老的《罗斯托姆之歌》：</p>
+<blockquote>
+<p>罗斯托姆说过：让言语柔软如泥土！<br />
+危险令勇士欢喜，许他们以胜利的荣光！<br />
+罗斯托姆说过：你说说看，人啊——<br />
+是一次壮烈地死去好，还是一辈子受煎熬好？……</p>
+</blockquote>
+<p>奥尼塞烦躁地打断他。兄弟对话间透露出：格拉哈把家产份额全让给了弟弟，长年流浪乞讨，这次冒着被认出的风险偷偷回村，只为看一眼女儿努努。他像立遗嘱一样叮嘱弟弟夫妇：给努努找个不拿面包羞辱她的男人，别贪门第钱财，只要两人相爱；若她自己爱上谁，别拦着。说完背起口袋和拐杖就走，连女儿最后一面也不肯等——“见了只是多一场眼泪”。</p>
+<p>在库罗峡谷口分别后，格拉哈坐在石头上，想起年轻时在节日上初见妻子一见钟情，想起当年的羊群和山岭，如今自己成了行将就木、死后无人哭吊的老乞丐。他朝着故乡骂了一声”啊，这可恶的人世！“，踉跄着向弗拉季高加索（山民称”扎乌格”）方向走去。</p>
+<h3 id="s2">2. 努努被许配</h3>
+<p>奥尼塞回家，夫妇俩商量：给努努提亲的人多，“打发出去就完了”。奥尼塞心里不安——他看不上那个提亲的人，而且努努放话说宁死也不嫁，她另有所爱。玛希娅却干脆：“问她做什么！我们挑谁她就嫁谁。”</p>
+<p>十六七岁的努努背着铜水罐进门，听说父亲”走了”，像被矛尖刺进心口，瘫坐在地无声痛哭。她本想扑进婶母怀里说出”我爱的是别人”，抬头却撞上玛希娅冰冷的脸色，把话咽了回去。玛希娅一句定案：“你父亲临走把你托付给我们，我们挑谁你就嫁谁。”然后打发她去草甸割草。</p>
+<h3 id="s3">3. 伊阿戈与努努</h3>
+<p>草甸上，伊阿戈——一个英俊挺拔的青年——隔着篱笆笑着招呼她，要帮她割草。努努反常地推开他，哭着说出实情：家里要把她嫁给别人，父亲也走了。伊阿戈脸色煞白，随即昂起头：</p>
+<blockquote>
+<p>“让伊阿戈死掉好了，若他把你让给别人！……今晚等大家都睡了，你到这里来。我还不知道要做什么，但凭圣吉瓦尔吉的恩典起誓，我谁也不让！”</p>
+</blockquote>
+<p>两人约定夜里在草甸相见。临别时努努回头看了他一眼——那一眼胜过千言万语。</p>
+<h3 id="s4">4. 格拉哈的血案往事（倒叙）</h3>
+<p>格拉哈出身富裕世家，年轻时自由恋爱娶妻，日子美满。但村里的警长处处刁难他。一次警长来借牛车，格拉哈拒绝并揍了他，被判入狱三年。他入狱后，赫维的地方长官迪安别克[这是上一任迪安别克，与后文的现任迪安别克不是同一人]看上了他的妻子，买通警长，骗她说丈夫要被流放西伯利亚，让她去求长官。妇人刚进门就被架进去，遭迪安别克强暴。</p>
+<p>当夜，越狱而出的格拉哈破窗而入。妻子扑过来求救，他却在狂怒中一刀剖开她的胸膛；又把钻到床底的迪安别克拖出来，把匕首捅进他的腋下：“你是猪，我宰你就像宰猪！”</p>
+<p>从此格拉哈亡命天涯，襁褓中的女儿努努由乡邻养大，奥尼塞成家后接进了自己家。</p>
+<h3 id="s5">5. 关卡勒索</h3>
+<p>格拉哈走到达里亚尔要塞，想搭商队去扎乌格。守关的俄国士兵一口咬定他是沙米尔的探子，威胁”报告长官，二十四小时内枪毙你”。绕了半天，真实目的才亮出来：“给我一个卢布，我放你过去。”搜遍全身，士兵只拿走一把小折刀——估摸着能换一杯伏特加。</p>
+<h3 id="s6">6. 彩礼交易</h3>
+<p>当晚，奥尼塞家来了两个披斗篷的媒人——玛穆卡等，替吉尔戈拉家提亲：吉尔戈拉本人在沙俄军中当差，求娶努努给他弟弟尼尼亚。一番讨价还价，彩礼定为：十五头奶牛、十个卢布给玛希娅（谢她养育之恩）、一匹马给努努的舅父、五只肥羊，外加足量的奶酪和黄油。媒人留下五卢布作定亲押金。</p>
+<p>按山地规矩，努努全程只能隔着板壁听着。她听不清那些字眼，只知道外人在轻松贱卖她的命运，心里苦水翻滚，只盼着客人快走——伊阿戈还在草甸等她。可客人反而摆开酒桌，为订婚干杯。</p>
+<h3 id="s7">7. 屋顶上的窥听</h3>
+<p>伊阿戈在草甸等到心焦，摸到院墙，翻上平顶，从屋顶的天窗洞口往下看：奥尼塞夫妇正和两个媒人推杯换盏——努努被订婚了！媒人还说起伊阿戈也来求过亲、被他们拒绝，嘲笑他：“伊阿戈算什么东西？领主的农奴罢了！没地没院没房！”</p>
+<p>这些话像箭一样扎进伊阿戈的心。他想起身世：母亲本是自由身，被人出卖给了领主；父亲为国战死；寡母被强登为农奴。他愤懑自问：凭什么他天生不配幸福？就因为他生在奴隶之家？</p>
+<p>他摸到天窗边，扔下一颗小石子。努努抬头，从洞口看见他燃烧的眼睛，对他笑了。两人隔着屋顶低语，再次约定夜里相见。</p>
+<h3 id="s8">8. 月下盟誓</h3>
+<p>深夜，玛希娅几次叫努努说话，努努装睡、装打呼噜，挨了过去。等全家睡熟，她溜出门。伊阿戈把她抱上草甸，两人互诉衷肠，认清了处境：她被许了人，按规矩这会酿成血亲仇杀；他是农奴，连自己的命运都不能做主。伊阿戈说：</p>
+<blockquote>
+<p>“是，我是奴隶！……暴力使我成了农奴，暴力夺走了我的一切，现在他们又想用暴力夺走你！这次我绝不向强暴者低头，看看谁的母亲哭吧。你只管爱我，别把我换给别人——世界大得很，我可以把仇人叫作朋友，也能安顿好你的生活。”</p>
+</blockquote>
+<p>两人商定：实在不行就翻山投奔沙米尔的车臣。努努起誓：“凭圣吉瓦尔吉作证，努努要么做你的妻子，要么淹死在河里。”</p>
+<h3 id="s9">9. 伊阿戈被捕</h3>
+<p>黎明，伊阿戈回村路上，迎面撞上新任迪安别克[沙俄新派的赫维行政长官]带着一队哥萨克。此人对语言风俗一窍不通，靠密探网统治，惯用皮鞭立威。当夜他刚被一伙告密者用假情报支开（真正的抢劫犯趁机劫了驼队），憋了一肚子火，正好拿伊阿戈撒气。</p>
+<p>队伍里就有努努的”未婚夫”的哥哥——警长吉尔戈拉。吉尔戈拉从背后抱住伊阿戈，旁人用刀背猛击其头部，把他捆了个结实。伊阿戈怒骂吉尔戈拉：“你又是什么东西！你这么干算个什么男人——你就是个婆娘！”迪安别克用鞭子抽他：“明天你就知道为什么了！”伊阿戈被扔进臭气熏天的村牢。</p>
+<h3 id="s10">10. 长官衙门的一天</h3>
+<p>第二天上午，迪安别克起床，吉尔戈拉一边伺候他穿衣洗脸，一边进谗：昨晚抢了驼队的肯定就是伊阿戈，赃物（锦缎）八成藏在他主人家里，说不定他主人也是同谋。</p>
+<p>院子里等着一群告状的山民：有人控诉哥萨克抢了牧场的羊、还反过来索赔六十只羊；伊阿戈的主人——一个小地主——也来了。迪安别克先对他傲慢背身，老头怒而戴帽昂立，迪安别克反而软了。地主几句话把他顶回去：“你既然认定他是贼，叫我来做什么？查案去！查出来依法办！”说完拂袖而去。</p>
+<p>迪安别克恼羞成怒，拿院里跪候的农民出气，下令哥萨克用皮鞭毒打，打得人们满脸是血。</p>
+<p>提审伊阿戈，逼他承认抢驼队。伊阿戈拒不认罪，被打耳光后仍冷笑：“你打一个捆着手的人，真是好汉子！”迪安别克暴跳如雷，命人给他戴上镣铐，押解到克韦舍提。</p>
+<p>接着，吉尔戈拉引进三个从格韦列季来的基斯廷人——正是真正的劫匪——他们把抢来的银器锦缎孝敬给迪安别克。迪安别克眉开眼笑，约好今晚在科比村收货。</p>
+<h3 id="s11">11. 村里与牢中</h3>
+<p>村里传遍了伊阿戈被捕的消息，人人都替他抱屈。努努从女友玛莉涅处得知噩耗，两人约定拼死抗婚，等伊阿戈回来。玛莉涅就是柯巴的恋人。</p>
+<p>迪安别克到科比村驿站：店东备好密室（地板下有暗坑），农民被强征十六只哺乳羔羊送到门口”孝敬”。第二天迪安别克还嫌羔羊麻烦，反而呵斥村长：“我又不是开饭馆的！”最后勒令把母羊也一起赶到他的牧场，“秋天再还给主人”。村长心里嘀咕：就这几只羊哪够这罪人塞牙缝？</p>
+<p>告状的农民拦车喊冤，迪安别克一鞭子抽在车夫后脑上，马车绝尘而去。一个农民捡起石头砸向车影：“让你再也别回来！”</p>
+<h3 id="s12">12. 上司与猎狗</h3>
+<p>迪安别克到克韦舍提向顶头上司”大人”报到。大人正陶醉于别人送的几只伊梅列季猎犬，喋喋不休讲昨天一小时打了七只野兔。迪安别克献上从劫匪处得来的古董银勺（谎称是给公爵夫人买的），然后汇报抓了”赫维头号强盗”伊阿戈，请大人批准流放西伯利亚。大人满口答应，心思全在狗身上。告状、审讯、判决文书，全由迪安别克一人炮制，几天后大人签个字，案子连同人犯一起移交县法院。</p>
+<h3 id="s13">13. 逼婚</h3>
+<p>努努在家苦熬。吉尔戈拉三天两头来找玛希娅密谋。一天他带着一位过路的老人上门，正式发难：“彩礼也收了，人却不放，存心让我在全公社面前丢人？”</p>
+<p>老人仗义执言：“爱情是强求不来的！过去公社就连结了婚的都能拆散，若没有情分，算什么家庭？”</p>
+<p>吉尔戈拉撕破脸：“现在不靠老规矩了，一切按法律！我是给沙皇当差的，我直接去找长官抢人，再把奥尼塞一家全毁了！”</p>
+<p>老人气得摸刀要和他拼命，被劝了出去。老人走后，奥尼塞夫妇彻底服了软，玛希娅献计：假装让努努去山上采野果，事先通知吉尔戈拉半路抢人；抢到后先把人藏到外村，避过风头。</p>
+<h3 id="s14">14. 抢亲与柯巴杀人</h3>
+<p>一天，村里姑娘们结伴上格尔盖蒂山采草莓。努努和玛莉涅落在后面，在奇赫里河边说体己话。努努说，婚纱布已经在缝了，但她起誓：</p>
+<blockquote>
+<p>“婚纱就是我的裹尸布，尼尼亚休想把我领进他家的门！”</p>
+</blockquote>
+<p>灌木丛后突然冲出吉尔戈拉带着一群打手。努努拼命反抗，骂他是”戴男人帽子的婆娘”。玛莉涅扯下自己的丝巾扔到男人们脚下——按山地最神圣的规矩，追兵见血也必须停在女人头巾之前——可吉尔戈拉早把山地规矩踩在脚下，一脚踢开头巾。</p>
+<p>千钧一发之际，猎人柯巴（玛莉涅的恋人）从林中冲出，和吉尔戈拉扭作一团。吉尔戈拉想把他挤下悬崖，反被柯巴摔倒、拔刀就要结果他；吉尔戈拉的同伙从背后用枪托打落他的刀。柯巴左手抄刀，扑向那人，拨开枪口，一刀捅进对方胸口，直没至柄。</p>
+<p>可就在搏斗间，吉尔戈拉一伙已经掳着努努骑马逃远。柯巴看着被打死的对手，又看看昏迷的玛莉涅——他杀了人，从此只能亡命天涯。</p>
+<p><strong>当天晚上</strong>，不顾努努的反抗哭喊，神父强行把她和尼尼亚拜堂成婚。第一部完。</p>
+<hr />
+<div class="pn">
+<a href="index.html"><small>扉页</small>← 扉页 · 作品与人物</a>
+<a class="r" href="part2.html"><small>第二部</small>第二部 · 阿尔沙要塞 →</a>
+</div>
+<footer>
+《弑父者》（მამის მკვლელი / The Patricide），亚历山大·卡兹别吉著，1882 年发表，作品已进入公有领域。<br>
+本页为依据俄文全译本制作的中文详细译述，情节、人物、关键对白均无省略。静态站点，可直接托管于 GitHub Pages。
+</footer>
+</article></div>
+</div>
+<button id="themeBtn" onclick="toggleTheme()" title="切换明暗主题">☾</button>
+<script>
+(function(){
+  var root=document.documentElement;
+  var saved=null;try{saved=localStorage.getItem('sfz-theme')}catch(e){}
+  if(saved)root.setAttribute('data-theme',saved);
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)root.setAttribute('data-theme','dark');
+  window.toggleTheme=function(){
+    var t=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',t);try{localStorage.setItem('sfz-theme',t)}catch(e){}
+    syncBtn();
+  };
+  function syncBtn(){var b=document.getElementById('themeBtn');if(b)b.textContent=root.getAttribute('data-theme')==='dark'?'☀':'☾'}
+  syncBtn();
+  // progress
+  var bar=document.getElementById('prog');
+  if(bar){addEventListener('scroll',function(){
+    var h=document.body.scrollHeight-innerHeight;
+    bar.style.width=(h>0?scrollY/h*100:0)+'%';
+  },{passive:true});}
+  // nav drawer
+  window.toggleNav=function(){document.body.classList.toggle('nav-open')};
+  var dr=document.getElementById('drawer');if(dr)dr.addEventListener('click',toggleNav);
+  // remember reading position
+  var page=location.pathname.split('/').pop()||'index.html';
+  if(/^part\d\.html$/.test(page)){
+    addEventListener('beforeunload',function(){
+      var cur=document.querySelector('.side nav a.cur');
+      try{localStorage.setItem('sfz-last',JSON.stringify({p:page,y:Math.round(scrollY),t:document.title}))}catch(e){}
+    });
+    // restore
+    try{var last=JSON.parse(localStorage.getItem('sfz-last')||'null');
+      if(last&&last.p===page&&last.y>200&&!location.hash){
+        addEventListener('load',function(){scrollTo(0,last.y)});
+      }}catch(e){}
+    // current scene highlight
+    var links=[].slice.call(document.querySelectorAll('.side nav a[href^="#"]'));
+    var heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))}).filter(Boolean);
+    if(heads.length&&'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){
+            links.forEach(function(a){a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id)});
+          }});
+      },{rootMargin:'-15% 0px -70% 0px'});
+      heads.forEach(function(h){io.observe(h)});
+    }
+  }
+})();
+</script>
+</body>
+</html>
